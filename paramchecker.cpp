@@ -11,11 +11,20 @@ bool vitalsAreOk(float bpm, float spo2, float respRate)
 {
   bool retVal = false;
   
-  retVal = checkVitals(bpm > 70 && bpm < 150);
+  if(checkVitals(bpm > 70 && bpm < 150) == true)
+  {
+    retVal = true;
+  }
   
-  retVal = checkVitals(spo2 > 80);
+  if(checkVitals(spo2 > 80) == true)
+  {
+    retVal = true;
+  }
   
-  retVal = checkVitals(respRate > 30 && respRate < 60);
+  if(checkVitals(respRate > 30 && respRate < 60) == true)
+  {
+    retVal = true;
+  }
 
   return retVal;
 }
