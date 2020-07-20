@@ -1,30 +1,26 @@
-bool checkVitals(bool condition)
+bool checkbpm(float bpm)
 {
   bool retVal;
   
-  retVal = condition ? true : false;
+  retVal = (bpm > 70 && bpm < 150) ? true : false;
  
   return retVal;  
 }
 
-bool vitalsAreOk(float bpm, float spo2, float respRate)
+bool checkspo2(float spo2)
 {
-  bool retVal = false;
+  bool retVal;
   
-  if(checkVitals(bpm > 70 && bpm < 150) == true)
-  {
-    retVal = true;
-  }
-  
-  if(checkVitals(spo2 > 80) == true)
-  {
-    retVal = true;
-  }
-  
-  if(checkVitals(respRate > 30 && respRate < 60) == true)
-  {
-    retVal = true;
-  }
+  retVal = (spo2 > 80) ? true : false;
+ 
+  return retVal;  
+}
 
-  return retVal;
+bool checkrespRate(float respRate)
+{
+  bool retVal;
+  
+  retVal = (respRate > 30 && respRate < 60) ? true : false;
+ 
+  return retVal;  
 }
