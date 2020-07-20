@@ -2,30 +2,27 @@
 bool bpmIsOk(float bpm)
 {
   bool retVal = false;
-  if(bpm > 70 && bpm < 150)
-  {
-    retVal = true;
-  }
+  
+  retVal = (bpm > 70 && bpm < 150) ? true : false;
+
   return retVal;  
 }
 
 bool spo2IsOk(float spo2)
 {
   bool retVal = false;
-  if(spo2 > 80)
-  {
-    retVal = true;
-  }
+  
+  retVal = (spo2 > 80) ? true : false;
+
   return retVal;  
 }
 
 bool respRateIsOk(float respRate)
 {
   bool retVal = false;
-  if(respRate > 30 && respRate < 60)
-  {
-    retVal = true;
-  }
+  
+  retVal = (respRate > 30 && respRate < 60) ? true : false;
+ 
   return retVal;  
 }
 
